@@ -20,12 +20,13 @@ export default defineType({
     defineField({
       name: 'price',
       type: 'string',
-      title: "Price of the dish in GBP",
+      title: "Price of the dish in Rs",
     }),
     defineField({
       name: 'image',
       type: 'image',
       title: "Image of the Dish",
+      validation: (Rule) => Rule.required()
     }),
   ],
 })

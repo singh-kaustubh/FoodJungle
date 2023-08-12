@@ -47,7 +47,7 @@ export default {
         },
         {
             name: "type",
-            title: "Enter a Rating from (1-5 Stars)",
+            title: "Enter a Category",
             type: "reference",
             to: [{ type: "category" }]
         },

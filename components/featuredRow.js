@@ -3,7 +3,7 @@ import React from 'react'
 import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import RestaurantCard from './restaurantCard'
 
-const FeaturedRow = ({ id, title, description, featuredCategory }) => {
+const FeaturedRow = ({ id, title, description, restaurants }) => {
     return (
         <View>
             <View className='flex-row mt-4 items-center justify-between px-4'>
@@ -22,7 +22,7 @@ const FeaturedRow = ({ id, title, description, featuredCategory }) => {
             >
                 {/* Restaurant Cards */}
                 <RestaurantCard
-                    id={1}
+                    id={id}
                     imgUrl='https://cdn.britannica.com/52/128652-050-14AD19CA/Maki-zushi.jpg?w=400&h=300&c=crop'
                     title={'Yo Sushi!'}
                     rating={4.5}

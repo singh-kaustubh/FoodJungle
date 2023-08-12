@@ -2,7 +2,7 @@ import React from 'react'
 import { ScrollView } from 'react-native';
 import CategoryCard from './categoryCard';
 
-const Categories = () => {
+const Categories = ({}) => {
     return (
         <ScrollView
             horizontal
