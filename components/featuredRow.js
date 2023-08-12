@@ -21,18 +21,23 @@ const FeaturedRow = ({ id, title, description, restaurants }) => {
                 className="pt-4"
             >
                 {/* Restaurant Cards */}
-                <RestaurantCard
-                    id={id}
-                    imgUrl='https://cdn.britannica.com/52/128652-050-14AD19CA/Maki-zushi.jpg?w=400&h=300&c=crop'
-                    title={'Yo Sushi!'}
-                    rating={4.5}
-                    category="Japanese"
-                    address="123 Main Street"
-                    description="This is a sushi item"
-                    dishes={[]}
-                    long={20}
-                    lat={20}
-                />
+                {
+                    restaurants?.map((element) => (
+                        < RestaurantCard
+                            id={element._id}
+                            imgUrl='https://cdn.britannica.com/52/128652-050-14AD19CA/Maki-zushi.jpg?w=400&h=300&c=crop'
+                            title={element.name}
+                            rating={element.rating}
+                            category={"Japanese"}
+                            address={element.address.substr(0, 20) + '...'}
+                            description={element.short_description}
+                            dishes={element.dishes}
+                            long={element.long}
+                            lat={element.lat}
+                        />
+                    ))
+                }
+
             </ScrollView>
         </View>
     )

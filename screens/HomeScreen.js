@@ -66,14 +66,14 @@ const HomeScreen = () => {
             </View>
             <ScrollView className="bg-gray-100 ">
                 <Categories />
-                {featuredCategory?.forEach((category) => {
+                {featuredCategory?.map((category) => (
                     <FeaturedRow
                         id={category._id}
-                        title={category._id}
+                        title={category.name}
                         description={category.short_description}
                         restaurants={category.restaurants}
                     />
-                })}
+                ))}
             </ScrollView>
         </SafeAreaView>
     );
