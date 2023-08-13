@@ -19,13 +19,15 @@ const FeaturedRow = ({ id, title, description, restaurants }) => {
                     paddingHorizontal: 15,
                 }}
                 className="pt-4"
+                showsHorizontalScrollIndicator={false}
             >
                 {/* Restaurant Cards */}
                 {
                     restaurants?.map((element) => (
                         < RestaurantCard
+                            key={element._id}
                             id={element._id}
-                            imgUrl='https://cdn.britannica.com/52/128652-050-14AD19CA/Maki-zushi.jpg?w=400&h=300&c=crop'
+                            imgUrl={element.image}
                             title={element.name}
                             rating={element.rating}
                             category={"Japanese"}

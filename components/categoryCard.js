@@ -1,11 +1,13 @@
-import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 
-const CategoryCard = ({ imgUrl, title }) => {
+const CategoryCard = ({ title, imgUrl }) => {
     return (
         <TouchableOpacity className="relative mr-2">
             <Image
-                source={require('../assets/favicon.png')}
+                source={{
+                    uri: imgUrl
+                }}
                 className="h-20 w-20 rounded"
             />
             <Text className="absolute bottom-1 left-1 text-white font-bold">
